@@ -650,6 +650,25 @@
   \vspace{-4.0mm}
 }
 
+% Define a line of cv information(skill)
+% Usage: \cvskill{<type>}{<skillset>}
+\newcommand*{\cvskillcust}[2]{%
+	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+}
+
+% Define an environment for cvitems(for cventry)
+\newenvironment{cvitemscust}{%
+  \vspace{-10.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
